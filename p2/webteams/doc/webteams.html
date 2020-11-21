@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>webteams</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<h1 id="dokumentation-zur-praktikumsaufgabe-webteams">Dokumentation zur Praktikumsaufgabe “Webteams”</h1>
+<p>edited by Duhan</p>
+<h2 id="aufbau-der-webanwendung">Aufbau der Webanwendung</h2>
+<p>Die Webanwendung besteht prinzipiell aus zwei Seiten. Einmal aus dem Formular zum hinzufügen neuer Teams und zum anderen aus der Hauptseite. Auf der Hauptseite kann zwischen einer Listen oder einer Tabellenansicht gewählt werde, wobei die Tabellenansicht standardmäßig aktiviert ist.</p>
+<h2 id="durchgeführte-ergänzungen">Durchgeführte Ergänzungen</h2>
+<p>Die Anwendung wurde um die Möglichkeit ergänzt zwei Personen einzutragen. Zusätzlich ist es nun auch möglich Eintrage zu löschen und die Präsentationsart der Daten zu ändern. Die application.py wurde so verändert dass der Parameter “listform” an die nötigen Methoden übergeben wird für die History Funktion. In der view.py wurde angepasst, in welcher Form die Tabelle dargestellt werden kann.</p>
+<h2 id="beschreibung-des-http-datenverkehrs">Beschreibung des HTTP-Datenverkehrs</h2>
+<h3 id="beim-start-der-anwendung">beim Start der Anwendung</h3>
+<p>Anfrage: GET localhost:8080/</p>
+<p>Antwort: html Dokument der Hauptseite der Anwendung</p>
+<p>Screenshot: <img src="screenshot_1.png" title="Screenshot 1" alt="alt text" /> ### beim Speichern von Formulardaten Anfrage: POST localhost:8080/add/?listform=tabelle mit Formulardaten</p>
+<p>Antwort: html Dokument der Hauptseite der Anwendung</p>
+<p>Screenshot: <img src="screenshot_2.png" title="Screenshot 2" alt="alt text" /></p>
+</body>
+</html>
