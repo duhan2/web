@@ -36,22 +36,26 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.a {
+.a:hover {
     background: lightblue;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 1;
     color: white;
+    transition: .4s;
+    padding-left: 15px;
 }
 
-.b {
+.b:hover {
     background: lightblue;
     grid-row-start: 3;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
     color: white;
+    transition: .4s;
+    padding-left: 15px;
 }
 
 .c {
@@ -61,6 +65,7 @@
     grid-column-start: 1;
     grid-column-end: 1;
     color: white;
+    
 }
 
 .d {
