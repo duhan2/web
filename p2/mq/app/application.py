@@ -17,6 +17,7 @@ class Application_cl(object):
    #-------------------------------------------------------
    def index(self, listform="tabelle"):
    #-------------------------------------------------------
+      #index Methode wird aufgerufen wenn root URL for the site is requested (http://localhost/)
       if listform == "listform=tabelle":
          listform = "tabelle"
       return self.createList_p(listform)
