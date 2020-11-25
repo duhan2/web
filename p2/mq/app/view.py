@@ -22,7 +22,7 @@ class View_cl(object):
    def createList_px(self, data_opl, listform):
    #-------------------------------------------------------
       if listform == "tabelle":
-         template_o = self.lookup_o.get_template('list.tpl')
+         template_o = self.lookup_o.get_template('startseite.tpl')
          markup_s = template_o.render(data_o = data_opl, listform = listform)
          return markup_s
       elif listform == "auf":
