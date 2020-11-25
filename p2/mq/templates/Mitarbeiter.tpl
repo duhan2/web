@@ -53,7 +53,7 @@
             </nav>
             
             <main class="e">
-              <h3>Pflege Weiterbildungen</h3>
+              <h3>Mitarbeiter</h3>
             </main>
           </div>
         

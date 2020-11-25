@@ -38,7 +38,42 @@ class View_cl(object):
             markup_s = template_o.render(data_o = data_opl, listform = listform) 
             return markup_s
          except:
-            return exceptions.html_error_template().render()   
+            return exceptions.html_error_template().render()
+      elif listform == "sichtweisemitarbeiter":
+         try:
+            template_o = self.lookup_o.get_template('Sichtweise_Mitarbeiter.tpl')
+            markup_s = template_o.render(data_o = data_opl, listform = listform) 
+            return markup_s
+         except:
+            return exceptions.html_error_template().render()
+      elif listform == "sichtweiseweiterbildungen":
+         try:
+            template_o = self.lookup_o.get_template('Sichtweise_Weiterbildungen.tpl')
+            markup_s = template_o.render(data_o = data_opl, listform = listform) 
+            return markup_s
+         except:
+            return exceptions.html_error_template().render()
+      elif listform == "mitarbeiter":
+         try:
+            template_o = self.lookup_o.get_template('Mitarbeiter.tpl')
+            markup_s = template_o.render(data_o = data_opl, listform = listform) 
+            return markup_s
+         except:
+            return exceptions.html_error_template().render()
+      elif listform == "weiterbildungen":
+         try:
+            template_o = self.lookup_o.get_template('Weiterbildungen.tpl')
+            markup_s = template_o.render(data_o = data_opl, listform = listform) 
+            return markup_s
+         except:
+            return exceptions.html_error_template().render()
+      elif listform == "zertifikate":
+         try:
+            template_o = self.lookup_o.get_template('Zertifikate.tpl')
+            markup_s = template_o.render(data_o = data_opl, listform = listform) 
+            return markup_s
+         except:
+            return exceptions.html_error_template().render()                    
    #-------------------------------------------------------
    def createForm_px(self,listform ,id_spl, data_opl):
    #-------------------------------------------------------

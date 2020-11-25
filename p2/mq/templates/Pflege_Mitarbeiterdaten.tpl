@@ -38,17 +38,17 @@
             <nav class="c">
               <h3>Teilnahme</h3>
               <ul>
-                <li><a href="#">[Sichtweise Mitarbeiter]</a>
-                <li><a href="#">[Sichtweise Weiterbildung]</a></li>
+                <li><a href="/?listform=sichtweisemitarbeiter">[Sichtweise Mitarbeiter]</a></li>
+                <li><a href="/?listform=sichtweiseweiterbildungen">[Sichtweise Weiterbildungen]</a></li>
               </ul>
             </nav>
           
             <nav class="d">
               <h3>Auswertung</h3>
               <ul>
-                <li><a href="#">[Mitarbeiter]</a>
-                <li><a href="#">[Weiterbildung]</a></li>
-                <li><a href="#">[Zertifikate]</a></li>
+                <li><a href="/?listform=mitarbeiter">[Mitarbeiter]</a></li>
+                <li><a href="/?listform=weiterbildungen">[Weiterbildungen]</a></li>
+                <li><a href="/?listform=zertifikate">[Zertifikate]</a></li>
               </ul>
             </nav>
             

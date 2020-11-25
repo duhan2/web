@@ -25,7 +25,7 @@
             </div>
           
             <nav class="a">
-              <a href="/?listform=startseite">[Startseite]</a></li>
+              <a href="/?listform=startseite">[Startseite]</a>
             </nav>
           
             <nav class="b">
@@ -53,7 +53,7 @@
             </nav>
             
             <main class="e">
-              <h3>Pflege Weiterbildungen</h3>
+              <h3>Sichtweise Weiterbildungen</h3>
             </main>
           </div>
         
