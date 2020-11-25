@@ -21,17 +21,24 @@ class View_cl(object):
    #-------------------------------------------------------
    def createList_px(self, data_opl, listform):
    #-------------------------------------------------------
-      if listform == "tabelle":
-         template_o = self.lookup_o.get_template('startseite.tpl')
+      if listform == "startseite":
+         template_o = self.lookup_o.get_template('Startseite.tpl')
          markup_s = template_o.render(data_o = data_opl, listform = listform)
          return markup_s
-      elif listform == "auf":
+      elif listform == "pflegemitarbeiterdaten":
          try:
-            template_o = self.lookup_o.get_template('list2.tpl')
+            template_o = self.lookup_o.get_template('Pflege_Mitarbeiterdaten.tpl')
             markup_s = template_o.render(data_o = data_opl, listform = listform) 
             return markup_s
          except:
             return exceptions.html_error_template().render()
+      elif listform == "pflegeweiterbildungen":
+         try:
+            template_o = self.lookup_o.get_template('Pflege_Weiterbildungen.tpl')
+            markup_s = template_o.render(data_o = data_opl, listform = listform) 
+            return markup_s
+         except:
+            return exceptions.html_error_template().render()   
    #-------------------------------------------------------
    def createForm_px(self,listform ,id_spl, data_opl):
    #-------------------------------------------------------

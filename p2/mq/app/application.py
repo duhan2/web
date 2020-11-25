@@ -15,11 +15,11 @@ class Application_cl(object):
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def index(self, listform="tabelle"):
+   def index(self, listform="startseite"):
    #-------------------------------------------------------
       #index Methode wird aufgerufen wenn root URL for the site is requested (http://localhost/)
-      if listform == "listform=tabelle":
-         listform = "tabelle"
+      if listform == "listform=startseite":
+         listform = "startseite"
       return self.createList_p(listform)
 
    @cherrypy.expose

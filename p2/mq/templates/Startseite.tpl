@@ -24,13 +24,13 @@
             </div>
           
             <nav class="a">
-              <a href="startseite.html">[Startseite]</a>
+              <a href="/?listform=startseite">[Startseite]</a>
             </nav>
           
             <nav class="b">
               <ul class="unstyled-list">
-                 <li><a href="#">[Pflege Mitarbeiter]</a></li>
-                 <li><a href="#">[Pflege Weiterbildung]</a></li>
+                 <li><a href="/?listform=pflegemitarbeiterdaten">[Pflege Mitarbeiterdaten]</a></li>
+                 <li><a href="/?listform=pflegeweiterbildungen">[Pflege Weiterbildungen]</a></li>
               </ul>
             </nav>
           
@@ -52,7 +52,7 @@
             </nav>
             
             <main class="e">
-              <h3>Inhaltsbereich</h3>
+              <h3>Startseite</h3>
             </main>
           </div>
         
