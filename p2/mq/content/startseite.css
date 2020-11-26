@@ -78,8 +78,7 @@
 
 
 main {
-    display: flex;
-    /*
+    display: flex;/*
     align-items: center;
     justify-content: center;*/
     background: whitesmoke;
@@ -96,3 +95,31 @@ main {
     padding: 0;
     margin: 0;
 }
+
+/*
+.customTable{
+    
+    margin-left: auto;
+    margin-right: auto;
+
+}
+*/
+
+.customTable td,.customTable th{
+
+    border:1px solid rgb(221, 221, 221);
+    /*padding: 2px;*/
+
+}
+
+.customTable tr:nth-child(even){background-color:#f2f2f2 ;}
+.customTable tr:hover{background-color:rgb(255, 255, 255);}
+.customTable th{
+
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+    background-color: blue;
+    color:white;
+}
+

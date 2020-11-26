@@ -18,6 +18,7 @@ class Application_cl(object):
    def index(self, listform="startseite"):
    #-------------------------------------------------------
       #index Methode wird aufgerufen wenn root URL for the site is requested (http://localhost/)
+      #so verändert, dass startseite als erste Seite angezeigt wird
       if listform == "listform=startseite":
          listform = "startseite"
       return self.createList_p(listform)
@@ -38,6 +39,7 @@ class Application_cl(object):
    #-------------------------------------------------------
    def save(self, id_spa, name1_spa, vorname1_spa, matrnr1_spa, semesteranzahl1_spa, name2_spa, vorname2_spa, matrnr2_spa, semesteranzahl2_spa, listform):
    #-------------------------------------------------------
+   #Übergabeparameter für Eingabe
       id_s = id_spa
       data_a = [ name1_spa, vorname1_spa, matrnr1_spa, semesteranzahl1_spa, name2_spa, vorname2_spa, matrnr2_spa, semesteranzahl2_spa ]
       if id_s != "None":

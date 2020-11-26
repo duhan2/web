@@ -21,6 +21,7 @@ class View_cl(object):
    #-------------------------------------------------------
    def createList_px(self, data_opl, listform):
    #-------------------------------------------------------
+   #Parameter für history Funktion
       if listform == "startseite":
          template_o = self.lookup_o.get_template('Startseite.tpl')
          markup_s = template_o.render(data_o = data_opl, listform = listform)
@@ -77,6 +78,7 @@ class View_cl(object):
    #-------------------------------------------------------
    def createForm_px(self,listform ,id_spl, data_opl):
    #-------------------------------------------------------
+   #Formulatatei
       template_o = self.lookup_o.get_template('form.tpl')
       markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
       return markup_s
