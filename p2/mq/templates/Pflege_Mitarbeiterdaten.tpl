@@ -73,15 +73,15 @@
                   <td>${data_o[key_s][6]}</td>
                   <td>${data_o[key_s][7]}</td>
                   <td>
-                      <a href="/edit/${key_s}/?listform=${listform}">bearbeiten</a>
-                      <a href="/delete/${key_s}/?listform=${listform}" class="clDelete">löschen</a>
+                      <a href="/edit/${key_s}/?listform=${listform}">Ändern</a>
+                      <a href="/delete/${key_s}/?listform=${listform}" class="clDelete">Löschen</a>
                   </td>
                 </tr>
                 % endfor
             </table>
 
             <div>
-              <a href="/add/?listform=${listform}"> erfassen </a>
+              <a href="/add/?listform=${listform}"> Erfassen </a>
             </div>
 
           </div>     
@@ -90,8 +90,5 @@
       </div>
     
 </body>
-
-
-
 
 </html>
