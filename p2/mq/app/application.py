@@ -37,11 +37,17 @@ class Application_cl(object):
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def save(self, id_spa, name1_spa, vorname1_spa, matrnr1_spa, semesteranzahl1_spa, name2_spa, vorname2_spa, matrnr2_spa, semesteranzahl2_spa, listform):
+   def save(self, id_spa, listform, name=None, vorname=None, akademischergrad=None, tätigkeit=None, bezeichnung=None, von=None, bis=None, beschreibung=None,max_teilnehmer=None,min_teilnehmer=None):
    #-------------------------------------------------------
    #Übergabeparameter für Eingabe
       id_s = id_spa
-      data_a = [ name1_spa, vorname1_spa, matrnr1_spa, semesteranzahl1_spa, name2_spa, vorname2_spa, matrnr2_spa, semesteranzahl2_spa ]
+      if listform =="pflegemitarbeiterdaten":
+         data_a = [name, vorname, akademischergrad, tätigkeit]
+      elif listform =="pflegeweiterbildungen":
+         data_a = [bezeichnung, von, bis, beschreibung,max_teilnehmer,min_teilnehmer]
+      print("Es geht los")
+      print(data_a)
+      print("Es ist vorbei")
       if id_s != "None":
          self.db_o.update_px(id_s, data_a)
       else:
@@ -79,6 +85,6 @@ class Application_cl(object):
       if id_spl != None:
          data_o = self.db_o.read_px(id_spl)
       else:
-         data_o = self.db_o.getDefault_px()
+         data_o = self.db_o.getDefault_px(listform)
       return self.view_o.createForm_px(listform, id_spl, data_o)
 # EOF

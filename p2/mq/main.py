@@ -1,16 +1,12 @@
+
+def funktion ( a , b ,c ,d ,e = None, f = None):
+    print(a,b,c,d,e,f)
+
+
 if __name__ == "__main__":
 
+    funktion("A","B","C","D","E", "F")
 
-    kajan  = 1
-
-    if kajan == 1 :
-        print("Kajan 1")
-    elif kajan == 2:
-        print("Kajan 2")
-    elif kajan ==3:
-        print("Kajan 3")
-        
-
-    print("Ebenin ami")
+    print("KASJASJSAJJASHJASHSAHSA")
 
     pass

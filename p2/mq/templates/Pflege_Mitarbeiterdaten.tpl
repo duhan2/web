@@ -58,8 +58,7 @@
             <h3>Pflege Mitarbeiterdaten</h3>
             <table>
                 <tr>
-                  <th>Name (1)</th><th>Vorname (1)</th><th>Matr.-Nr. (1)</th><th>Semesteranzahl. (1)</th>
-                  <th>Name (2)</th><th>Vorname (2)</th><th>Matr.-Nr. (2)</th><th>Semesteranzahl. (2)</th>
+                  <th>Name</th><th>Vorname</th><th>akademischer Grad</th><th>Tätigkeit</th>
                   <th>Aktion</th>
                 </tr>
                 % for key_s in data_o:
@@ -68,10 +67,6 @@
                   <td>${data_o[key_s][1]}</td>
                   <td>${data_o[key_s][2]}</td>
                   <td>${data_o[key_s][3]}</td>
-                  <td>${data_o[key_s][4]}</td>
-                  <td>${data_o[key_s][5]}</td>
-                  <td>${data_o[key_s][6]}</td>
-                  <td>${data_o[key_s][7]}</td>
                   <td>
                       <a href="/edit/${key_s}/?listform=${listform}">Ändern</a>
                       <a href="/delete/${key_s}/?listform=${listform}" class="clDelete">Löschen</a>

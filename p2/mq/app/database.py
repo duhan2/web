@@ -57,9 +57,13 @@ class Database_cl(object):
       return status_b
 
    #-------------------------------------------------------
-   def getDefault_px(self):
+   def getDefault_px(self,listform):
    #-------------------------------------------------------
-      return ['', '', '', '', '', '', '', ''] # hier später Ergänzung!
+      if listform =="pflegemitarbeiterdaten":
+         return ['', '', '', ''] # hier später Ergänzung!
+      else:
+         return ['', '', '', '', '', '', '', ''] # hier später Ergänzung!
+
 
    #-------------------------------------------------------
    def readData_p(self):

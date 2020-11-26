@@ -79,9 +79,14 @@ class View_cl(object):
    def createForm_px(self,listform ,id_spl, data_opl):
    #-------------------------------------------------------
    #Bestimmung des Formulars
-      template_o = self.lookup_o.get_template('form.tpl')
-      markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
-      return markup_s
+      if listform == "pflegemitarbeiterdaten":
+         template_o = self.lookup_o.get_template('form_Pflege_Mitarbeiterdaten.tpl')
+         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
+         return markup_s
+      else:
+         template_o = self.lookup_o.get_template('form.tpl')
+         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
+         return markup_s
 
    #-------------------------------------------------------
    def readFile_p(self, fileName_spl):
