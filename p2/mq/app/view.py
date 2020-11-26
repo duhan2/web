@@ -78,7 +78,7 @@ class View_cl(object):
    #-------------------------------------------------------
    def createForm_px(self,listform ,id_spl, data_opl):
    #-------------------------------------------------------
-   #Formulatatei
+   #Bestimmung des Formulars
       template_o = self.lookup_o.get_template('form.tpl')
       markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
       return markup_s

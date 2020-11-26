@@ -53,6 +53,7 @@
         </nav>
         
         <main class="e">
+        
           <div class="customTable">
             <h3>Pflege Mitarbeiterdaten</h3>
             <table>
@@ -78,6 +79,13 @@
                 </tr>
                 % endfor
             </table>
+
+            <div>
+              <a href="/add/?listform=${listform}"> erfassen </a>
+            </div>
+
+          </div>     
+      
         </main>
       </div>
     
