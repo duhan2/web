@@ -62,7 +62,7 @@ class Database_cl(object):
       if listform =="pflegemitarbeiterdaten":
          return ['', '', '', ''] # hier später Ergänzung!
       else:
-         return ['', '', '', '', '', '', '', ''] # hier später Ergänzung!
+         return ['', '', '', '', '', ''] # hier später Ergänzung!
 
 
    #-------------------------------------------------------

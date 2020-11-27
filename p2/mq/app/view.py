@@ -83,8 +83,8 @@ class View_cl(object):
          template_o = self.lookup_o.get_template('form_Pflege_Mitarbeiterdaten.tpl')
          markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
          return markup_s
-      else:
-         template_o = self.lookup_o.get_template('form.tpl')
+      elif listform == "pflegeweiterbildungen":
+         template_o = self.lookup_o.get_template('form_Pflege_Weiterbildungen.tpl')
          markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
          return markup_s
 
