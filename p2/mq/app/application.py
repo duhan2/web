@@ -17,10 +17,11 @@ class Application_cl(object):
    #-------------------------------------------------------
    def index(self, listform="startseite"):
    #-------------------------------------------------------
-      print("JA BROOOOOOOOOOOOOOOOO INDEEEEEEEEEEEEEEXXXXXXXXXXX")
+      print("Index auf listform=" + listform)
       #index Methode wird aufgerufen wenn root URL for the site is requested (http://localhost/)
       #so verändert, dass startseite als erste Seite angezeigt wird
       #hier die update
+      self.db_o.readData_p(listform)
       if listform == "listform=startseite":
          listform = "startseite"
       return self.createList_p(listform)
@@ -48,16 +49,16 @@ class Application_cl(object):
       elif listform =="pflegeweiterbildungen":
          data_a = [bezeichnung, von, bis, beschreibung,max_teilnehmer,min_teilnehmer]
       if id_s != "None":
-         self.db_o.update_px(id_s, data_a) #hier bestimmt der in welche Json reingeschrieben wird
+         self.db_o.update_px(id_s, data_a,listform) #hier bestimmt der in welche Json reingeschrieben wird
       else:
-         self.db_o.create_px(data_a)   #hier bestimmt der in welche Json reingeschrieben wird
+         self.db_o.create_px(data_a,listform)   #hier bestimmt der in welche Json reingeschrieben wird
       return self.createList_p(listform)
 
    @cherrypy.expose
    #-------------------------------------------------------
    def delete(self, id, listform):
    #-------------------------------------------------------
-      self.db_o.delete_px(id)
+      self.db_o.delete_px(id,listform)
       raise cherrypy.HTTPRedirect('/' + "?listform=" + listform)
          
 

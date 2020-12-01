@@ -10,16 +10,16 @@ class DataId_cl(object):
 #----------------------------------------------------------
 
    #-------------------------------------------------------
-   def __init__(self):
+   def __init__(self,listform = None):
    #-------------------------------------------------------
       self.maxId_i = 0
-      self.readMaxId_p()
+      self.readMaxId_p(listform)
 
    #-------------------------------------------------------
-   def create_px(self):
+   def create_px(self,listform):
    #-------------------------------------------------------
       self.maxId_i += 1
-      self.saveMaxId_p()
+      self.saveMaxId_p(listform)
       return str(self.maxId_i)
 
    #-------------------------------------------------------
@@ -28,21 +28,49 @@ class DataId_cl(object):
       return str(self.maxId_i)
 
    #-------------------------------------------------------
-   def readMaxId_p(self):
+   def readMaxId_p(self,listform):
    #-------------------------------------------------------
-      try:
-         fp_o = codecs.open(os.path.join('data', 'maxid.json'), 'r', 'utf-8')
-      except:
-         self.maxId_i = 0
-         self.saveMaxId_p()
+      if listform == "pflegeweiterbildungen":
+         try:
+            fp_o = codecs.open(os.path.join('data', 'weiterbildungen_maxid.json'), 'r', 'utf-8')
+         except:
+            self.maxId_i = 0
+            self.saveMaxId_p(listform)
+         else:
+            with fp_o:
+               self.maxId_i = json.load(fp_o)
+         return
+      elif listform == "pflegemitarbeiterdaten":
+         try:
+            fp_o = codecs.open(os.path.join('data', 'mitarbeiterdaten_maxid.json'), 'r', 'utf-8')
+         except:
+            self.maxId_i = 0
+            self.saveMaxId_p(listform)
+         else:
+            with fp_o:
+               self.maxId_i = json.load(fp_o)
+         return
       else:
-         with fp_o:
-            self.maxId_i = json.load(fp_o)
-      return
+         try:
+            fp_o = codecs.open(os.path.join('data', 'maxid.json'), 'r', 'utf-8')
+         except:
+            self.maxId_i = 0
+            self.saveMaxId_p(listform)
+         else:
+            with fp_o:
+               self.maxId_i = json.load(fp_o)
+         return
 
    #-------------------------------------------------------
-   def saveMaxId_p(self):
+   def saveMaxId_p(self,listform):
    #-------------------------------------------------------
-      with codecs.open(os.path.join('data', 'maxid.json'), 'w', 'utf-8') as fp_o:
-         json.dump(self.maxId_i, fp_o)
+      if listform == "pflegeweiterbildungen":
+         with codecs.open(os.path.join('data', 'weiterbildungen_maxid.json'), 'w', 'utf-8') as fp_o:
+            json.dump(self.maxId_i, fp_o)
+      elif listform == "pflegemitarbeiterdaten":
+         with codecs.open(os.path.join('data', 'mitarbeiterdaten_maxid.json'), 'w', 'utf-8') as fp_o:
+            json.dump(self.maxId_i, fp_o)
+      else:            
+         with codecs.open(os.path.join('data', 'maxid.json'), 'w', 'utf-8') as fp_o:
+            json.dump(self.maxId_i, fp_o)
 # EOF

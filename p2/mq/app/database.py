@@ -12,18 +12,18 @@ class Database_cl(object):
 #----------------------------------------------------------
 
    #-------------------------------------------------------
-   def __init__(self):
+   def __init__(self,listform = None):
    #-------------------------------------------------------
       self.data_o = None
       self.maxId_o = dataid.DataId_cl()
-      self.readData_p()
+      self.readData_p(listform)
 
    #-------------------------------------------------------
-   def create_px(self, data_opl):
+   def create_px(self, data_opl,listform):
    #-------------------------------------------------------
-      id_s = self.maxId_o.create_px()
+      id_s = self.maxId_o.create_px(listform)
       self.data_o[str(id_s)] = data_opl
-      self.saveData_p()
+      self.saveData_p(listform)
       return str(id_s)
 
    #-------------------------------------------------------
@@ -38,21 +38,21 @@ class Database_cl(object):
       return data_o
 
    #-------------------------------------------------------
-   def update_px(self, id_spl, data_opl):
+   def update_px(self, id_spl, data_opl,listform):
    #-------------------------------------------------------
       status_b = False
       if id_spl in self.data_o:
          self.data_o[id_spl] = data_opl
-         self.saveData_p()
+         self.saveData_p(listform)
          status_b = True
       return status_b
 
    #-------------------------------------------------------
-   def delete_px(self, id_spl):
+   def delete_px(self, id_spl,listform):
    #-------------------------------------------------------
       status_b = False
       if self.data_o.pop(id_spl, None) != None:
-         self.saveData_p()
+         self.saveData_p(listform)
          status_b = True
       return status_b
 
@@ -66,23 +66,50 @@ class Database_cl(object):
 
 
    #-------------------------------------------------------
-   def readData_p(self):
+   def readData_p(self, listform):
    #-------------------------------------------------------
-      print("Lmao readdata rorororororororooror")
-      try:
-         fp_o = codecs.open(os.path.join('data', 'webteams.json'), 'r', 'utf-8')
-      except:
-         self.data_o = {}
-         self.saveData_p()
-      else:
-         with fp_o:
-            self.data_o = json.load(fp_o)
-      return
+      if listform == "pflegemitarbeiterdaten":
+         try:
+            fp_o = codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'r', 'utf-8')
+         except:
+            self.data_o = {}
+            self.saveData_p(listform)
+         else:
+            with fp_o:
+               self.data_o = json.load(fp_o)
+         return
 
+      elif listform == "pflegeweiterbildungen":
+         try:
+            fp_o = codecs.open(os.path.join('data', 'weiterbildungen.json'), 'r', 'utf-8')
+         except:
+            self.data_o = {}
+            self.saveData_p(listform)
+         else:
+            with fp_o:
+               self.data_o = json.load(fp_o)
+         return
+      else:
+         try:
+            fp_o = codecs.open(os.path.join('data', 'webteams.json'), 'r', 'utf-8')
+         except:
+            self.data_o = {}
+            self.saveData_p(listform)
+         else:
+            with fp_o:
+               self.data_o = json.load(fp_o)
+         return
    #-------------------------------------------------------
-   def saveData_p(self):
+   def saveData_p(self,listform):
    #-------------------------------------------------------
-      with codecs.open(os.path.join('data', 'webteams.json'), 'w', 'utf-8') as fp_o:
-         json.dump(self.data_o, fp_o, indent=3)
+      if listform == "pflegemitarbeiterdaten":
+         with codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'w', 'utf-8') as fp_o:
+            json.dump(self.data_o, fp_o, indent=3)
+      elif listform == "pflegeweiterbildungen":
+         with codecs.open(os.path.join('data', 'weiterbildungen.json'), 'w', 'utf-8') as fp_o:
+            json.dump(self.data_o, fp_o, indent=3)
+      else:            
+         with codecs.open(os.path.join('data', 'webteams.json'), 'w', 'utf-8') as fp_o:
+            json.dump(self.data_o, fp_o, indent=3)
 
 # EOF
