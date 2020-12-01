@@ -68,6 +68,7 @@ class Database_cl(object):
    #-------------------------------------------------------
    def readData_p(self):
    #-------------------------------------------------------
+      print("Lmao readdata rorororororororooror")
       try:
          fp_o = codecs.open(os.path.join('data', 'webteams.json'), 'r', 'utf-8')
       except:
