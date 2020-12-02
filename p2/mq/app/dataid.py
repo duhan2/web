@@ -51,14 +51,6 @@ class DataId_cl(object):
                self.maxId_i = json.load(fp_o)
          return
       else:
-         try:
-            fp_o = codecs.open(os.path.join('data', 'maxid.json'), 'r', 'utf-8')
-         except:
-            self.maxId_i = 0
-            self.saveMaxId_p(listform)
-         else:
-            with fp_o:
-               self.maxId_i = json.load(fp_o)
          return
 
    #-------------------------------------------------------
@@ -71,6 +63,5 @@ class DataId_cl(object):
          with codecs.open(os.path.join('data', 'mitarbeiterdaten_maxid.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.maxId_i, fp_o)
       else:            
-         with codecs.open(os.path.join('data', 'maxid.json'), 'w', 'utf-8') as fp_o:
-            json.dump(self.maxId_i, fp_o)
+         return
 # EOF

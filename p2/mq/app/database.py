@@ -90,14 +90,6 @@ class Database_cl(object):
                self.data_o = json.load(fp_o)
          return
       else:
-         try:
-            fp_o = codecs.open(os.path.join('data', 'webteams.json'), 'r', 'utf-8')
-         except:
-            self.data_o = {}
-            self.saveData_p(listform)
-         else:
-            with fp_o:
-               self.data_o = json.load(fp_o)
          return
    #-------------------------------------------------------
    def saveData_p(self,listform):
@@ -109,7 +101,6 @@ class Database_cl(object):
          with codecs.open(os.path.join('data', 'weiterbildungen.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.data_o, fp_o, indent=3)
       else:            
-         with codecs.open(os.path.join('data', 'webteams.json'), 'w', 'utf-8') as fp_o:
-            json.dump(self.data_o, fp_o, indent=3)
+         return
 
 # EOF
