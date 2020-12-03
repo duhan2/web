@@ -74,13 +74,11 @@
                 </tr>
                 % endfor
             </table>
-          </div>  
             <div>
               <a href="/add/?listform=${listform}"> Erfassen </a>
             </div>
-
-   
-      
+          </div>  
+                
         </main>
       </div>
     
