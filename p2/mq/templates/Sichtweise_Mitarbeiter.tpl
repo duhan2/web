@@ -53,7 +53,26 @@
             </nav>
             
             <main class="e">
+            <div class="customTable">
               <h3>Sichtweise Mitarbeiter</h3>
+              <table>
+                <tr>
+                  <th>Name</th><th>Vorname</th><th>akademischer Grad</th><th>Tätigkeit</th>
+                  <th>Aktion</th>
+                </tr>
+                % for key_s in data_o:
+                <tr>
+                  <td>${data_o[key_s][0]}</td>
+                  <td>${data_o[key_s][1]}</td>
+                  <td>${data_o[key_s][2]}</td>
+                  <td>${data_o[key_s][3]}</td>
+                  <td>
+                    <a href="#">anzeigen</a>
+                  </td>
+                </tr>
+                % endfor
+            </table>
+              </div>
             </main>
           </div>
         

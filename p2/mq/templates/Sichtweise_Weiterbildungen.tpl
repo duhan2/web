@@ -53,7 +53,30 @@
             </nav>
             
             <main class="e">
+
+              <div class="customTable">
               <h3>Sichtweise Weiterbildungen</h3>
+                  <table>
+                      <tr>
+                        <th>Bezeichnung</th><th>Von</th><th>Bis</th><th>Beschreibung</th>
+                        <th>maximale Teilnehmerzahl</th><th>minimale Teilnehmerzahl</th>
+                        <th>Aktion</th>
+                      </tr>
+                      % for key_s in data_o:
+                      <tr>
+                        <td>${data_o[key_s][0]}</td>
+                        <td>${data_o[key_s][1]}</td>
+                        <td>${data_o[key_s][2]}</td>
+                        <td>${data_o[key_s][3]}</td>
+                        <td>${data_o[key_s][4]}</td>
+                        <td>${data_o[key_s][5]}</td>
+                        <td>
+                        <a href="#">Anzeigen</a>
+                        </td>
+                      </tr>
+                      % endfor
+                  </table>
+                </div>    
             </main>
           </div>
         

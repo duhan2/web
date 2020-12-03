@@ -40,7 +40,7 @@ class DataId_cl(object):
             with fp_o:
                self.maxId_i = json.load(fp_o)
          return
-      elif listform == "pflegemitarbeiterdaten":
+      elif listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter":
          try:
             fp_o = codecs.open(os.path.join('data', 'mitarbeiterdaten_maxid.json'), 'r', 'utf-8')
          except:
@@ -59,7 +59,7 @@ class DataId_cl(object):
       if listform == "pflegeweiterbildungen":
          with codecs.open(os.path.join('data', 'weiterbildungen_maxid.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.maxId_i, fp_o)
-      elif listform == "pflegemitarbeiterdaten":
+      elif listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter":
          with codecs.open(os.path.join('data', 'mitarbeiterdaten_maxid.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.maxId_i, fp_o)
       else:            

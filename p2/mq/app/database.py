@@ -61,14 +61,15 @@ class Database_cl(object):
    #-------------------------------------------------------
       if listform =="pflegemitarbeiterdaten":
          return ['', '', '', ''] # hier später Ergänzung!
-      else:
+      elif listform == "pflegeweiterbildungen":
          return ['', '', '', '', '', ''] # hier später Ergänzung!
-
+      else:
+         return
 
    #-------------------------------------------------------
    def readData_p(self, listform):
    #-------------------------------------------------------
-      if listform == "pflegemitarbeiterdaten":
+      if listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter":
          try:
             fp_o = codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'r', 'utf-8')
          except:
@@ -79,7 +80,7 @@ class Database_cl(object):
                self.data_o = json.load(fp_o)
          return
 
-      elif listform == "pflegeweiterbildungen":
+      elif listform == "pflegeweiterbildungen" or listform == "sichtweiseweiterbildungen":
          try:
             fp_o = codecs.open(os.path.join('data', 'weiterbildungen.json'), 'r', 'utf-8')
          except:
@@ -94,7 +95,7 @@ class Database_cl(object):
    #-------------------------------------------------------
    def saveData_p(self,listform):
    #-------------------------------------------------------
-      if listform == "pflegemitarbeiterdaten":
+      if listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter":
          with codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.data_o, fp_o, indent=3)
       elif listform == "pflegeweiterbildungen":
