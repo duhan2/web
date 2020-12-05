@@ -70,6 +70,7 @@
                   <td>
                       <a href="/edit/${key_s}/?listform=${listform}">Ändern</a>
                       <a href="/delete/${key_s}/?listform=${listform}" class="clDelete">Löschen</a>
+                      <a href="#">Anzeigen</a>
                   </td>
                 </tr>
                 % endfor
