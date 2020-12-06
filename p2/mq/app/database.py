@@ -69,7 +69,7 @@ class Database_cl(object):
    #-------------------------------------------------------
    def readData_p(self, listform):
    #-------------------------------------------------------
-      if listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter":
+      if listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter" :
          try:
             fp_o = codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'r', 'utf-8')
          except:
@@ -95,7 +95,7 @@ class Database_cl(object):
    #-------------------------------------------------------
    def saveData_p(self,listform):
    #-------------------------------------------------------
-      if listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter":
+      if listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter" :
          with codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.data_o, fp_o, indent=3)
       elif listform == "pflegeweiterbildungen":
