@@ -60,6 +60,7 @@
                     <tr>
                       <th>Bezeichnung</th><th>Von</th><th>Bis</th><th>Beschreibung</th>
                       <th>maximale Teilnehmerzahl</th><th>minimale Teilnehmerzahl</th>
+                      <th>Qualifikation</th><th>Zertifikat</th>
                       <th>Aktion</th>
                     </tr>
                     % for key_s in data_o:
@@ -70,6 +71,8 @@
                       <td>${data_o[key_s][3]}</td>
                       <td>${data_o[key_s][4]}</td>
                       <td>${data_o[key_s][5]}</td>
+                      <td>${data_o[key_s][6]}</td>
+                      <td>${data_o[key_s][7]}</td>
                       <td>
                           <a href="/edit/${key_s}/?listform=${listform}">Ändern</a>
                           <a href="/delete/${key_s}/?listform=${listform}" class="clDelete">Löschen</a>

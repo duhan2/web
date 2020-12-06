@@ -12,31 +12,31 @@
    <form id="idWTForm" action="/save/?listform=${listform}" method="POST">
       <input type="hidden" value="${key_s}" id="id_spa" name="id_spa" />
       <div>
-         <label for="name1_spa">Name</label>
+         <label for="name_spa">Name</label>
          <input type="text"
                 value="${data_o[0]}"
-                id="name1_spa"
+                id="name_spa"
                 name="name" required />
       </div>
       <div>
-         <label for="vorname1_spa">Vorname</label>
+         <label for="vorname_spa">Vorname</label>
          <input type="text"
                 value="${data_o[1]}"
-                id="vorname1_spa"
+                id="vorname_spa"
                 name="vorname" required />
       </div>
       <div>
-         <label for="matrnr1_spa">akademischer Grad</label>
+         <label for="akademischergrad_spa">akademischer Grad</label>
          <input type="text"
                 value="${data_o[2]}"
-                id="matrnr1_spa"
+                id="akademischergrad_spa"
                 name="akademischergrad" required />
       </div>
       <div>
-         <label for="semesteranzahl1_spa">Tätigkeit</label>
+         <label for="tätigkeit_spa">Tätigkeit</label>
          <input type="text"
                 value="${data_o[3]}"
-                id="semesteranzahl1_spa"
+                id="tätigkeit_spa"
                 name="tätigkeit" required />
       </div>
 

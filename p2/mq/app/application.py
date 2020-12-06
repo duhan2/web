@@ -40,14 +40,14 @@ class Application_cl(object):
 
    @cherrypy.expose
    #-------------------------------------------------------
-   def save(self, id_spa, listform, name=None, vorname=None, akademischergrad=None, tätigkeit=None, bezeichnung=None, von=None, bis=None, beschreibung=None,max_teilnehmer=None,min_teilnehmer=None):
+   def save(self, id_spa, listform, name=None, vorname=None, akademischergrad=None, tätigkeit=None, bezeichnung=None, von=None, bis=None, beschreibung=None,max_teilnehmer=None,min_teilnehmer=None,qualifikation=None,zertifikat=None):
    #-------------------------------------------------------
    #Übergabeparameter für Eingabe
       id_s = id_spa
       if listform =="pflegemitarbeiterdaten":
          data_a = [name, vorname, akademischergrad, tätigkeit]
       elif listform =="pflegeweiterbildungen":
-         data_a = [bezeichnung, von, bis, beschreibung,max_teilnehmer,min_teilnehmer]
+         data_a = [bezeichnung, von, bis, beschreibung,max_teilnehmer,min_teilnehmer , qualifikation,zertifikat]
       if id_s != "None":
          self.db_o.update_px(id_s, data_a,listform) #hier bestimmt der in welche Json reingeschrieben wird
       else:

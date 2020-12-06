@@ -12,47 +12,63 @@
    <form id="idWTForm" action="/save/?listform=${listform}" method="POST">
       <input type="hidden" value="${key_s}" id="id_spa" name="id_spa" />
       <div>
-         <label for="name1_spa">Bezeichnung</label>
+         <label for="bezeichnung_spa">Bezeichnung</label>
          <input type="text"
                 value="${data_o[0]}"
-                id="name1_spa"
+                id="bezeichnung_spa"
                 name="bezeichnung" required />
       </div>
       <div>
-         <label for="vorname1_spa">Von</label>
+         <label for="von_spa">Von</label>
          <input type="date"
                 value="${data_o[1]}"
-                id="vorname1_spa"
+                id="von_spa"
                 name="von" required />
       </div>
       <div>
-         <label for="matrnr1_spa">Bis</label>
+         <label for="bis_spa">Bis</label>
          <input type="date"
                 value="${data_o[2]}"
-                id="matrnr1_spa"
+                id="bis_spa"
                 name="bis" required />
       </div>
       <div>
-         <label for="semesteranzahl1_spa">Beschreibung</label>
+         <label for="beschreibung_spa">Beschreibung</label>
          <input type="text"
                 value="${data_o[3]}"
-                id="semesteranzahl1_spa"
+                id="beschreibung_spa"
                 name="beschreibung" required />
       </div>
       <div>
-        <label for="matrnr2_spa">maximale Teilnehmeranzahl</label>
+        <label for="max_spa">maximale Teilnehmeranzahl</label>
         <input type="number"
                value="${data_o[4]}"
-               id="matrnr2_spa"
+               id="max_spa"
                name="max_teilnehmer" required />
      </div>
      <div>
-        <label for="semesteranzahl2_spa">minimale Teilnehmeranzahl</label>
+        <label for="min_spa">minimale Teilnehmeranzahl</label>
         <input type="number"
                value="${data_o[5]}"
-               id="semesteranzahl2_spa"
+               id="min_spa"
                name="min_teilnehmer" required />
      </div>
+
+     <div>
+      <label for="qualifikation_spa">Qualifikation</label>
+      <input type="text"
+             value="${data_o[6]}"
+             id="qualifikation_spa"
+             name="qualifikation" required />
+      </div>
+
+      <div>
+         <label for="zertifikat_spa">Zertifikat</label>
+         <input type="text"
+               value="${data_o[7]}"
+               id="zertifikat_spa"
+               name="zertifikat" required />
+      </div>
 
       <div>
          <input type="submit" value="Speichern"/>

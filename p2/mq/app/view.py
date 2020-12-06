@@ -75,14 +75,6 @@ class View_cl(object):
             return markup_s
          except:
             return exceptions.html_error_template().render()
-      elif listform == "anzeigepflegemitarbeiterdaten":
-         try:
-            template_o = self.lookup_o.get_template('anzeige_Pflege_Mitarbeiterdaten.tpl')
-            markup_s = template_o.render(data_o = data_opl, listform = listform) 
-            return markup_s
-         except:
-            return exceptions.html_error_template().render()
-
                   
    #-------------------------------------------------------
    def createForm_px(self,listform ,id_spl, data_opl):
