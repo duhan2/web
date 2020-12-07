@@ -67,7 +67,7 @@
                   <td>${data_o[key_s][2]}</td>
                   <td>${data_o[key_s][3]}</td>
                   <td>
-                    <a href="#">anzeigen</a>
+                    <a href="/edit/${key_s}/?listform=anzeigesichtweisemitarbeiter">anzeigen</a>
                   </td>
                 </tr>
                 % endfor

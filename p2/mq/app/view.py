@@ -96,6 +96,14 @@ class View_cl(object):
          template_o = self.lookup_o.get_template('anzeige_Pflege_Weiterbildungen.tpl')
          markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
          return markup_s
+      elif listform == "anzeigesichtweiseweiterbildungen":
+         template_o = self.lookup_o.get_template('anzeige_Sichtweise_Weiterbildungen.tpl')
+         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
+         return markup_s
+      elif listform == "anzeigesichtweisemitarbeiter":
+         template_o = self.lookup_o.get_template('anzeige_Sichtweise_Mitarbeiter.tpl')
+         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
+         return markup_s
    #-------------------------------------------------------
    def readFile_p(self, fileName_spl):
    #-------------------------------------------------------
