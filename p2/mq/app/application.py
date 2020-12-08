@@ -86,8 +86,11 @@ class Application_cl(object):
          data_o = self.db_o.read_px(id_spl)
       else:
          data_o = self.db_o.getDefault_px(listform)
-         
+
       if listform == "anzeigesichtweisemitarbeiter":
+         zusatz_data_o = self.db_o.readData_p(listform)
+         return self.view_o.createForm_px(listform, id_spl, data_o, zusatz_data_o)
+      elif listform == "anzeigesichtweiseweiterbildungen":
          zusatz_data_o = self.db_o.readData_p(listform)
          return self.view_o.createForm_px(listform, id_spl, data_o, zusatz_data_o)
 

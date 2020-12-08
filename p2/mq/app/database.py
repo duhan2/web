@@ -98,7 +98,16 @@ class Database_cl(object):
          with fp_o:
             zusatz_data_o = json.load(fp_o)
 
-         return zusatz_data_o   
+         return zusatz_data_o
+
+      elif listform =="anzeigesichtweiseweiterbildungen":
+
+         fp_o = codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'r', 'utf-8')
+
+         with fp_o:
+            zusatz_data_o = json.load(fp_o)
+
+         return zusatz_data_o      
 
       else:
          return
@@ -108,7 +117,7 @@ class Database_cl(object):
       if listform == "pflegemitarbeiterdaten" or listform == "sichtweisemitarbeiter" :
          with codecs.open(os.path.join('data', 'mitarbeiterdaten.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.data_o, fp_o, indent=3)
-      elif listform == "pflegeweiterbildungen":
+      elif listform == "pflegeweiterbildungen" or listform == "sichtweiseweiterbildungen":
          with codecs.open(os.path.join('data', 'weiterbildungen.json'), 'w', 'utf-8') as fp_o:
             json.dump(self.data_o, fp_o, indent=3)
       else:            

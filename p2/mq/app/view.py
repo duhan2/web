@@ -98,7 +98,7 @@ class View_cl(object):
          return markup_s
       elif listform == "anzeigesichtweiseweiterbildungen":
          template_o = self.lookup_o.get_template('anzeige_Sichtweise_Weiterbildungen.tpl')
-         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
+         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform, zusatz_data_o = zusatz_data_opl)
          return markup_s
       elif listform == "anzeigesichtweisemitarbeiter":
          #inc.

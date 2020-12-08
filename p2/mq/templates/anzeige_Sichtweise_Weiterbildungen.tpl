@@ -75,5 +75,30 @@
       </div>
 
    </form>
+
+   <br>
+
+   <p>verfügbare Mitarbeiter in tabellarischer Form</p>
+
+   <div class="customTable">
+   <table>
+      <tr>
+        <th>Name</th>
+        <th>Vorname</th>
+        <th>Aktion</th>
+      </tr>
+      % for key in zusatz_data_o:
+      <tr>
+        <td>${zusatz_data_o[key][0]}</td>
+        <td>${zusatz_data_o[key][1]}</td>
+        <td>
+           <a href="#">teilnehmen</a>
+         </td>
+      </tr>
+      % endfor
+   </table>
+   </div>
+
+
 </body>
 </html>
