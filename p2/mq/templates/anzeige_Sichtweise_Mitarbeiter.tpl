@@ -77,12 +77,6 @@
          <tr>
            <td>${zusatz_data_o[key][0]}</td>
            <td>
-           <!--
-               <form action="/save/?listform=${listform}" method="post">
-                  <input type="hidden" name="kajan" value="${zusatz_data_o[0]}"/>
-                  <input type="submit" value="teilnehmen"/>
-               </form>
-             -->
               <a href="#">teilnehmen</a>
             </td>
          </tr>
