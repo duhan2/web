@@ -90,6 +90,16 @@ class Database_cl(object):
             with fp_o:
                self.data_o = json.load(fp_o)
          return
+
+      elif listform =="anzeigesichtweisemitarbeiter":
+
+         fp_o = codecs.open(os.path.join('data', 'weiterbildungen.json'), 'r', 'utf-8')
+
+         with fp_o:
+            zusatz_data_o = json.load(fp_o)
+
+         return zusatz_data_o   
+
       else:
          return
    #-------------------------------------------------------

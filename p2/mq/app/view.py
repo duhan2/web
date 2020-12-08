@@ -77,7 +77,7 @@ class View_cl(object):
             return exceptions.html_error_template().render()
                   
    #-------------------------------------------------------
-   def createForm_px(self,listform ,id_spl, data_opl):
+   def createForm_px(self,listform ,id_spl, data_opl, zusatz_data_opl = None):
    #-------------------------------------------------------
    #Bestimmung des Formulars
       if listform == "pflegemitarbeiterdaten":
@@ -101,8 +101,9 @@ class View_cl(object):
          markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
          return markup_s
       elif listform == "anzeigesichtweisemitarbeiter":
+         #inc.
          template_o = self.lookup_o.get_template('anzeige_Sichtweise_Mitarbeiter.tpl')
-         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform)
+         markup_s = template_o.render(data_o = data_opl, key_s = id_spl, listform = listform, zusatz_data_o = zusatz_data_opl)
          return markup_s
    #-------------------------------------------------------
    def readFile_p(self, fileName_spl):

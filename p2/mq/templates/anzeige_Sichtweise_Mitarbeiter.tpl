@@ -61,11 +61,34 @@
              disabled/>
       </div>
 
+   </form>
+
+      <br>
+
+      <p>verfügbare Weiterbildungen in tabellarischer Form</p>
+
+      <div class="customTable">
+      <table>
+         <tr>
+           <th>Bezeichnung</th>
+           <th>Aktionen</th>
+         </tr>
+         % for key in zusatz_data_o:
+         <tr>
+           <td>${zusatz_data_o[key][0]}</td>
+           <td>
+              <a href="#">teilnehmen</a>
+            </td>
+         </tr>
+         % endfor
+      </table>
+      </div>
+
       <div>
       <a href="/?listform=sichtweisemitarbeiter"> Zurück</a>
       </div>
 
-   </form>
+
 
 </body>
 </html>
